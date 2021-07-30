@@ -3,6 +3,8 @@ plugins {
     id 'kotlin-android'
 }
 
+apply from: "$project.rootDir/app_test_runner.gradle"
+
 android {
     compileSdkVersion 30
 
