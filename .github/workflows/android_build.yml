@@ -6,6 +6,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        api-level: [ 21, 23, 29 ]
+        target: [ default, google_apis ]
 
     steps:
       - name: Checkout the code
@@ -23,7 +27,13 @@ jobs:
         run: ./gradlew runUnitTests
 
       - name: Running instumentation tests
-        run: ./gradlew runInstrumentationTests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+            api-level: ${{ matrix.api-level }}
+            target: ${{ matrix.target }}
+            arch: x86_64
+            profile: Nexus 6
+            script: ./gradlew runInstrumentationTests
 
       - name: Reclaim Memory
         run: ./gradlew --stop && jps|grep -E 'KotlinCompileDaemon|GradleDaemon'| awk '{print $1}'| xargs kill -9
