@@ -1,7 +1,7 @@
 package com.nyt.mostpopular.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.nyt.mostpopular.R
 
 class MainActivity : AppCompatActivity() {

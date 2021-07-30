@@ -4,6 +4,7 @@ plugins {
 }
 
 apply from: "$project.rootDir/app_test_runner.gradle"
+apply from: "$project.rootDir/spotless.gradle"
 
 android {
     compileSdkVersion 30
