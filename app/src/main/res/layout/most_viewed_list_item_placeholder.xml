@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/repo_list_item_height"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/repo_list_item_height">
+
+        <View
+            android:id="@+id/thumbnail"
+            android:layout_width="@dimen/placeholderImage"
+            android:layout_height="@dimen/placeholderImage"
+            android:layout_centerVertical="true"
+            android:layout_margin="15dp"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/bg_circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/placeholderTextHeight"
+            android:layout_gravity="top"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/background"
+            app:layout_constraintBottom_toTopOf="@+id/titleViewSub"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/thumbnail" />
+
+        <View
+            android:id="@+id/titleViewSub"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/placeholderTextHeight"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="10dp"
+            android:background="@color/background"
+            app:layout_constraintBottom_toTopOf="@+id/tvWrittenBy"
+            app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintTop_toTopOf="@+id/thumbnail" />
+
+        <View
+            android:id="@+id/tvWrittenBy"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/placeholderTextHeight"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/background"
+            app:layout_constraintEnd_toEndOf="@+id/titleViewSub"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/titleViewSub"
+            app:layout_constraintTop_toBottomOf="@+id/titleViewSub" />
+
+        <View
+            android:id="@+id/tvCategory"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/placeholderTextHeight"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:background="@color/background"
+            app:layout_constraintEnd_toEndOf="@+id/titleViewSub"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/titleViewSub"
+            app:layout_constraintTop_toBottomOf="@+id/tvWrittenBy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

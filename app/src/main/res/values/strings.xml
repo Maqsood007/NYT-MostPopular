@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">NYT MostPopular</string>
+
+    <string name="news_title" translatable="false">"Anguish and Anger From the Navy SEALs Who Turned In Edward Gallagher"</string>
+    <string name="article_by" translatable="false">By DAVE PHILIPPS</string>
+    <string name="title_category" translatable="false">TERRORISM</string>
+    <string name="news_date" translatable="false">2017-06-2019</string>
+
+    <string name="something_went_wrong">Something went wrong. Please try again.</string>
+    <string name="go_to_detail_arrow">Go to detail arrow</string>
+    <string name="toggle_theme">Dark Theme</string>
+    <string name="action_settings">Setting</string>
+    <string name="settings">Settings</string>
+    <string name="new_details">News Details</string>
+    <string name="arabic">Arabic</string>
+
 </resources>
