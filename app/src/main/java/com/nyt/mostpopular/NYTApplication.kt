@@ -7,7 +7,7 @@ import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
 
 /**
- * Created by Muhammad Maqsood on 04/10/2020.
+ * Created by Muhammad Maqsood on 31/07/2021.
  */
 @HiltAndroidApp
 class NYTApplication : Application() {

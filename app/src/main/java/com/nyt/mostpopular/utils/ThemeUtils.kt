@@ -5,7 +5,7 @@ import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatDelegate
 
 /**
- * Created by Muhammad Maqsood on 31/07/2020.
+ * Created by Muhammad Maqsood on 31/07/2021.
  */
 object ThemeUtils {
 
