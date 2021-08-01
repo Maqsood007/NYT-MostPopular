@@ -2,10 +2,14 @@ package com.nyt.mostpopular.ui.mostviewed
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.nyt.mostpopular.R
 import com.nyt.mostpopular.databinding.FragmentMostViewedBinding
 import com.nyt.mostpopular.repository.models.MostViewedResponse
@@ -99,5 +103,31 @@ class MostViewedFragment : BaseFragment() {
     override fun onDestroyView() {
         fragmentMostViewedBinding?.postList?.adapter = null
         super.onDestroyView()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.main, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when (item.itemId) {
+            R.id.action_settings -> {
+                navigateToSettings()
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun navigateToSettings() {
+
+        findNavController().navigate(
+            R.id.action_mostViewedFragment_to_settingFragment,
+            Bundle().apply {
+                putString(
+                    TOP_TITLE,
+                    getString(R.string.settings)
+                )
+            })
     }
 }
