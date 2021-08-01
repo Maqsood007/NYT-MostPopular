@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_most_viewed"
+    app:startDestination="@id/mostViewedFragment">
+
+    <fragment
+        android:id="@+id/mostViewedFragment"
+        android:name="com.nyt.mostpopular.ui.mostviewed.MostViewedFragment"
+        android:label="@string/app_name">
+        <action
+            android:id="@+id/action_mostViewedFragment_to_mostViewedDetailFragment"
+            app:destination="@id/mostViewedDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mostViewedDetailFragment"
+        android:name="com.nyt.mostpopular.ui.details.MostViewedDetailFragment"
+        android:label="{top_title}"
+        tools:layout="@layout/fragment_most_viewed_detail" >
+        <argument
+            android:name="top_title"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="News Details" />
+    </fragment>
+
+</navigation>

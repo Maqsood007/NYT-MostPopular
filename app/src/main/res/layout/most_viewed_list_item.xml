@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.nyt.mostpopular.R" />
+
+        <variable
+            name="viewModel"
+            type="com.nyt.mostpopular.ui.mostviewed.viewmodel.MostViewedListItemViewModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/repo_list_item_height"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/repo_list_item_height"
+            android:clipToPadding="false">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="@dimen/placeholderImage"
+                android:layout_height="@dimen/placeholderImage"
+                android:layout_centerVertical="true"
+                android:layout_margin="15dp"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/bg_circle"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{viewModel.avatar}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="40dp"
+                android:ellipsize="end"
+                android:lines="2"
+                android:text="@{viewModel.title}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/TextViewColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/thumbnail"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/news_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWrittenBy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="16dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@{viewModel.authorName}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/TextViewColor"
+                app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+                app:layout_constraintStart_toStartOf="@+id/tvTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                tools:text="@string/article_by" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCategory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="20dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@{viewModel.category}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/TextViewColor"
+                app:layout_constraintEnd_toStartOf="@+id/textView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvWrittenBy"
+                app:layout_constraintTop_toBottomOf="@+id/tvWrittenBy"
+                tools:text="@string/title_category" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_date"
+                android:drawablePadding="@dimen/date_icon_padding"
+                android:gravity="center_vertical|start"
+                android:text="@{viewModel.date}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/TextViewColor"
+                app:layout_constraintEnd_toEndOf="@+id/tvWrittenBy"
+                app:layout_constraintTop_toBottomOf="@+id/tvWrittenBy"
+                tools:text="@string/news_date" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/go_to_detail_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvTitle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>
