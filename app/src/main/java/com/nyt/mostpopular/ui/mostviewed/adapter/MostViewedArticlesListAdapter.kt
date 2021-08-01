@@ -1,5 +1,6 @@
 package com.nyt.mostpopular.ui.mostviewed.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
@@ -54,6 +55,7 @@ class MostViewedArticlesListAdapter :
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun updateMostViewedArticles(mostViewedArticlesRepo: List<Result?>) {
         this.mostViewedArticlesList = mostViewedArticlesRepo
         notifyDataSetChanged()

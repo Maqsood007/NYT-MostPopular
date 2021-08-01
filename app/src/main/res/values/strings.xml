@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NYT MostPopular</string>
+    <string name="app_name">NYT MostViewed</string>
 
     <string name="news_title" translatable="false">"Anguish and Anger From the Navy SEALs Who Turned In Edward Gallagher"</string>
     <string name="article_by" translatable="false">By DAVE PHILIPPS</string>

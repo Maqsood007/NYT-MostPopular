@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NYT الأكثر مشاهدة</string>
+
+    <string name="something_went_wrong">هناك خطأ ما. حاول مرة اخرى.</string>
+    <string name="go_to_detail_arrow">انتقل إلى سهم التفاصيل</string>
+    <string name="toggle_theme">مظهر داكن</string>
+    <string name="action_settings">إعدادات</string>
+    <string name="settings">إعدادات</string>
+    <string name="new_details">تفاصيل الخبر</string>
+    <string name="arabic">العربية</string>
+
+</resources>

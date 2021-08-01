@@ -1,5 +1,6 @@
 package com.nyt.mostpopular.ui.details
 
+import android.annotation.SuppressLint
 import android.content.res.Configuration
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -45,6 +46,7 @@ class MostViewedDetailFragment : BaseFragment() {
         return view
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         initViews(view)
