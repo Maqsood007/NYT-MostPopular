@@ -1,5 +1,6 @@
 package com.nyt.mostpopular.ui.mostviewed
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
@@ -63,6 +64,7 @@ class MostViewedFragment : BaseFragment() {
         addStateObserver()
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun setUpAdapter() {
 
         MostViewedArticlesListAdapter().let {
