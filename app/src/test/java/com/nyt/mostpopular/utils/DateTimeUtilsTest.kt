@@ -25,5 +25,4 @@ class DateTimeUtilsTest {
 
         Assert.assertNotEquals(expected, DateTimeUtils.getParsedDate(input))
     }
-
 }

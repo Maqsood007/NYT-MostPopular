@@ -7,4 +7,10 @@ import dagger.hilt.android.AndroidEntryPoint
  * Created by Muhammad Maqsood on 31/07/2021.
  */
 @AndroidEntryPoint
-open class BaseFragment : Fragment()
+open class BaseFragment : Fragment() {
+
+    companion object {
+
+        const val TOP_TITLE = "top_title"
+    }
+}

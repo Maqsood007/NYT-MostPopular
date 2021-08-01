@@ -26,6 +26,8 @@ class MainActivity : BaseActivity() {
             when (des.id) {
                 R.id.mostViewedFragment ->
                     supportActionBar?.title = getString(R.string.app_name)
+                R.id.mostViewedDetailFragment ->
+                    supportActionBar?.title = getString(R.string.new_details)
             }
         }
     }

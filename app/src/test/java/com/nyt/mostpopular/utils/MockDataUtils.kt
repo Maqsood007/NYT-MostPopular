@@ -4,8 +4,8 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.nyt.mostpopular.repository.models.Media
 import com.nyt.mostpopular.repository.models.MostViewedResponse
-import java.lang.reflect.Type
 import com.nyt.mostpopular.repository.models.Result
+import java.lang.reflect.Type
 
 /**
  * Created by Muhammad Maqsood on 31/07/2021.
@@ -47,18 +47,14 @@ object MockDataUtils {
         val type: Type = object : TypeToken<List<Media>>() {}.type
 
         return Gson().fromJson(response, type)
-
     }
-
 
     fun getMockedFailureMedia(): List<Media> {
 
         val response = "[]"
         val type: Type = object : TypeToken<List<Media>>() {}.type
         return Gson().fromJson(response, type)
-
     }
-
 
     fun getMockedResponse(): String {
 
@@ -132,15 +128,12 @@ object MockDataUtils {
             "  ]"
     }
 
-
     fun getMockedResults(): List<Result> {
 
         val response = getMockedResponse()
         val type: Type = object : TypeToken<List<Result>>() {}.type
         return Gson().fromJson(response, type)
-
     }
-
 
     private fun getMockedMostViewedResponse(): String {
 
@@ -217,8 +210,6 @@ object MockDataUtils {
             "    }\n" +
             "  ]\n" +
             "}"
-
-
     }
 
     fun getMockedNewsResponse(): MostViewedResponse {
@@ -226,7 +217,5 @@ object MockDataUtils {
         val response = getMockedMostViewedResponse()
         val type: Type = object : TypeToken<MostViewedResponse>() {}.type
         return Gson().fromJson(response, type)
-
     }
-
 }

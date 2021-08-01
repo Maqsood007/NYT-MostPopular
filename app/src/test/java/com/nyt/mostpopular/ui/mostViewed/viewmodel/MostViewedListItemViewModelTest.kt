@@ -1,6 +1,7 @@
 package com.nyt.mostpopular.ui.mostViewed.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import com.nyt.mostpopular.repository.models.Result
 import com.nyt.mostpopular.ui.mostviewed.viewmodel.MostViewedListItemViewModel
 import com.nyt.mostpopular.utils.MockDataUtils
 import org.junit.After
@@ -10,7 +11,6 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
-import com.nyt.mostpopular.repository.models.Result
 
 /**
  * Created by Muhammad Maqsood on 01/08/2021.

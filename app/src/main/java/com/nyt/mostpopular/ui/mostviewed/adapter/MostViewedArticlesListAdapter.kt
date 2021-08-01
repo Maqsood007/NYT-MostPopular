@@ -2,11 +2,15 @@ package com.nyt.mostpopular.ui.mostviewed.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.nyt.mostpopular.R
 import com.nyt.mostpopular.databinding.MostViewedListItemBinding
 import com.nyt.mostpopular.repository.models.Result
+import com.nyt.mostpopular.ui.base.BaseFragment.Companion.TOP_TITLE
+import com.nyt.mostpopular.ui.details.MostViewedDetailFragment
 import com.nyt.mostpopular.ui.mostviewed.viewmodel.MostViewedListItemViewModel
 
 /**
@@ -38,6 +42,15 @@ class MostViewedArticlesListAdapter :
         holder.bind(mostViewedArticlesRepo)
 
         holder.itemView.setOnClickListener {
+
+            val bundle = bundleOf(
+                MostViewedDetailFragment.URL_TO_BROWSE to mostViewedArticlesRepo?.url,
+                TOP_TITLE to it.context.getString(R.string.new_details)
+            )
+            it.findNavController().navigate(
+                R.id.action_mostViewedFragment_to_mostViewedDetailFragment,
+                bundle
+            )
         }
     }
 

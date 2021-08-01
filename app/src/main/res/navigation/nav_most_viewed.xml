@@ -8,5 +8,21 @@
     <fragment
         android:id="@+id/mostViewedFragment"
         android:name="com.nyt.mostpopular.ui.mostviewed.MostViewedFragment"
-        android:label="@string/app_name"/>
+        android:label="@string/app_name">
+        <action
+            android:id="@+id/action_mostViewedFragment_to_mostViewedDetailFragment"
+            app:destination="@id/mostViewedDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mostViewedDetailFragment"
+        android:name="com.nyt.mostpopular.ui.details.MostViewedDetailFragment"
+        android:label="{top_title}"
+        tools:layout="@layout/fragment_most_viewed_detail" >
+        <argument
+            android:name="top_title"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="News Details" />
+    </fragment>
+
 </navigation>

@@ -33,5 +33,4 @@ class DataParsingUtilsTest {
         val mockedData = getMockedFailureMedia()
         Assert.assertNull(DataParsingUtils.getThumbnail(mockedData))
     }
-
 }
